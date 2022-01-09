@@ -1,1 +1,1 @@
-get:run
+bot: python get.py
