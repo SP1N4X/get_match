@@ -90,22 +90,21 @@ def getNextMatch(): # FINITO #
     response = request.json()
     next_match = response[1]['formattedOrario']
 
-def run():
-            data = datetime.now()
-            getNextMatch()
-            next_match = datetime.strptime(next_match, '%H:%M') - timedelta(minutes=1)
-            next_match = next_match.strftime('%H:%M')
-            a = True
-            while a == True:
-                        now = datetime.now()
-                        timer = now.strftime("%H:%M")
-                        if timer==next_match:
-                                    print('in esecuzione')
-                                    getOdds()
-                                    print('FATTO!')
-                        else:
-                                    print(timer)
-                                    print(next_match)
-                                    time.sleep(20)
-                                    print('-')
+data = datetime.now()
+getNextMatch()
+next_match = datetime.strptime(next_match, '%H:%M') - timedelta(minutes=1)
+next_match = next_match.strftime('%H:%M')
+a = True
+while a == True:
+    now = datetime.now()
+    timer = now.strftime("%H:%M")
+    if timer==next_match:
+        print('in esecuzione')
+        getOdds()
+        print('FATTO!')
+    else:
+        print(timer)
+        print(next_match)
+        time.sleep(20)
+        print('-')
 
