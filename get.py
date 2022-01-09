@@ -13,7 +13,7 @@ headers = {"Referer": "https://www.betexplorer.com",
 s = requests.Session()
 session = s.headers.update(headers)
 
-file = 'get/json.json'
+file = 'json.json'
 
 def addResult(new): # FINITO #
     global file
