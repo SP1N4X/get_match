@@ -1,7 +1,9 @@
 from flask import Flask, request
 import cal_result
+from flask_cors import CORS
 
 app = Flask('')
+CORS(app)
 
 
 @app.route('/')
