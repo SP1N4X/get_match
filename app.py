@@ -16,5 +16,6 @@ def index():
 
 def result():
     ale = request.get_json()
+    print(ale)
     risultato = cal_result.cal(ale)
     return risultato
