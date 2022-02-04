@@ -18,4 +18,5 @@ def result():
     ale = request.get_json()
     print(ale)
     risultato = cal_result.cal(ale)
+    print(risultato)
     return risultato
