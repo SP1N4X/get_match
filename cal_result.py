@@ -9,5 +9,5 @@ def cal(data):
   model.load_model("model.txt")
   ynew1 = str(model.predict(xnew)[-1])
   ynew2 = model.predict_proba(xnew)[-1]
-  result = {'casa':x['casa'].iloc[0],'ospite':x['ospite'].iloc[0],'orario':x['orario'].iloc[0],'pred':ynew1,'prob_1':ynew2[1],'prob_X':ynew2[0],'prob_2':ynew2[2]}
+  result = {'casa':x['casa'].iloc[0].item(),'ospite':x['ospite'].iloc[0].item(),'orario':x['orario'].iloc[0].item(),'pred':ynew1,'prob_1':ynew2[1],'prob_X':ynew2[0],'prob_2':ynew2[2]}
   return result
